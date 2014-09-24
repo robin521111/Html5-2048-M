@@ -16,8 +16,8 @@ function getPosLeft( i , j ){
 
 function getNumberBackgroundColor( number ){
     switch( number ){
-        case 2:return "#eee4da";break;
-        case 4:return "#ede0c8";break;
+        case 2:return "#CCCC66";break;
+        case 4:return "#99FF99";break;
         case 8:return "#f2b179";break;
         case 16:return "#f59563";break;
         case 32:return "#f67c5f";break;
@@ -29,6 +29,9 @@ function getNumberBackgroundColor( number ){
         case 2048:return "#09c";break;
         case 4096:return "#a6c";break;
         case 8192:return "#93c";break;
+        case "李文君":return "#CCCC66";break;
+        case "庄友淳":return "#99FF99";break;
+        case "翔": return "#f2b179";break;
     }
 
     return "black";

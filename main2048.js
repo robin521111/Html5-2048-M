@@ -82,7 +82,23 @@ function updateBoardView(){
                 theNumberCell.css('left',getPosLeft(i,j));
                 theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
                 theNumberCell.css('color',getNumberColor( board[i][j] ) );
-                theNumberCell.text( board[i][j] );
+                theNumberCell.css('font-size',20);
+                if (board[i][j] ==2 ) {
+                    theNumberCell.text("李文君");
+                    theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
+                }
+                else if (board[i][j] ==4 ) {
+                    theNumberCell.text("庄友淳");
+                    theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
+                }
+                else if (board[i][j] == 8) {
+                    theNumberCell.text("翔！");
+                    theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
+                }
+                else if (board[i][j] == 16 ) {
+                    theNumberCell.text("翔!!");
+                    theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
+                };
             }
 
             hasConflicted[i][j] = false;
@@ -122,11 +138,18 @@ function generateOneNumber(){
     }
 
     //随机一个数字
-    var randNumber = Math.random() < 0.5 ? 2 : 4;
 
+    var randNumber = Math.random() < 0.5 ? 2 : 4;
+    var junjun = "";
+    if (randNumber == 2) {
+        junjun= "李文君";
+    }
+    else if (randNumber == 4) {
+        junjun = "庄友淳";
+    };
     //display number at random position
-    board[randx][randy] = randNumber;
-    showNumberWithAnimation( randx , randy , randNumber );
+    board[randx][randy] = junjun;
+    showNumberWithAnimation( randx , randy , randNumber,junjun );
 
     return true;
 }
