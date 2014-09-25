@@ -83,29 +83,46 @@ function updateBoardView(){
                 theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
                 theNumberCell.css('color',getNumberColor( board[i][j] ) );
                 theNumberCell.css('font-size',20);
-                if (board[i][j] ==2 ) {
+                if (board[i][j] == 2 ) {
                     theNumberCell.text("李文君");
                     theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
+                    theNumberCell.css('font-size',20);
                 }
-                else if (board[i][j] ==4 ) {
+                else if (board[i][j] == 4 ) {
                     theNumberCell.text("庄友淳");
                     theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
+                    theNumberCell.css('font-size',20);
+                    
+
                 }
                 else if (board[i][j] == 8) {
                     theNumberCell.text("翔！");
+                    theNumberCell.css('font-size',20);
                     theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
                 }
                 else if (board[i][j] == 16 ) {
-                    theNumberCell.text("翔!!");
+                    theNumberCell.text("大翔!!");
+                    theNumberCell.css('font-size',20);
                     theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
-                };
+                }
+                else if (board[i][j] ==32) {
+                    theNumberCell.text("黑翔!!");
+                    theNumberCell.css('font-size',20);
+                    theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
+                }
+                else if (board[i][j] ==32) {
+                    theNumberCell.text("白翔!!");
+                    theNumberCell.css('font-size',20);
+                    theNumberCell.css('background-color',getNumberBackgroundColor( board[i][j] ) );
+                }
+
             }
 
             hasConflicted[i][j] = false;
         }
 
     $('.number-cell').css('line-height',cellSideLength+'px');
-    $('.number-cell').css('font-size',0.6*cellSideLength+'px');
+    // $('.number-cell').css('font-size',0.6*cellSideLength+'px');
 }
 
 function generateOneNumber(){
@@ -148,7 +165,7 @@ function generateOneNumber(){
         junjun = "庄友淳";
     };
     //display number at random position
-    board[randx][randy] = junjun;
+    board[randx][randy] = randNumber;
     showNumberWithAnimation( randx , randy , randNumber,junjun );
 
     return true;

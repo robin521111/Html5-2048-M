@@ -34,7 +34,7 @@ function getNumberBackgroundColor( number ){
         case "翔": return "#f2b179";break;
     }
 
-    return "black";
+    return "white";
 }
 
 function getNumberColor( number ){
